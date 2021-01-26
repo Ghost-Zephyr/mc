@@ -1,0 +1,9 @@
+name: BlankPlugin
+main: dev.bitsnthings.mc.blank.BlankPlugin
+version: 1.0
+api-version: 1.13
+commands:
+  blank:
+    description: Blank command by BlankPlugin
+    useage: /blank
+    permission: blankplugin.blank

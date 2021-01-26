@@ -1,0 +1,6 @@
+[submodule "ebow"]
+	path = ebow
+	url = https://github.com/Ghost-Zephyr/enderbow
+[submodule "eitems"]
+	path = eitems
+	url = https://github.com/Ghost-Zephyr/enderitems

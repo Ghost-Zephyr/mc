@@ -1,0 +1,10 @@
+serv/version_history.json
+serv/usercache.json
+serv/eula.txt
+serv/cache
+serv/worl*
+serv/worl
+serv/logs
+*/target/
+.vscode/
+*/.*
