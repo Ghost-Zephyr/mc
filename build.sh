@@ -4,7 +4,7 @@
 wd=`pwd`
 cd $1
 
-mvn install
+mvn package
 cp target/"$1"-*.*.?.jar ../serv/plugins
 
 cd $wd
