@@ -4,3 +4,6 @@
 [submodule "eitems"]
 	path = eitems
 	url = https://github.com/Ghost-Zephyr/enderitems
+[submodule "cess"]
+	path = cess
+	url = git@github.com:Ghost-Zephyr/CustomEssentials.git
