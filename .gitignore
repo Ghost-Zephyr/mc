@@ -1,6 +1,7 @@
 serv/version_history.json
 serv/usercache.json
 serv/eula.txt
+serv/plugins/
 serv/cache
 serv/worl*
 serv/worl

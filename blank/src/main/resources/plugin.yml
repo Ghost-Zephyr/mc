@@ -5,5 +5,5 @@ api-version: 1.13
 commands:
   blank:
     description: Blank command by BlankPlugin
-    useage: /blank
+    usage: /blank
     permission: blankplugin.blank

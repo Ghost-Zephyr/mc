@@ -7,3 +7,6 @@
 [submodule "cess"]
 	path = cess
 	url = git@github.com:Ghost-Zephyr/CustomEssentials.git
+[submodule "noperms"]
+	path = noperms
+	url = git@github.com:Ghost-Zephyr/noPermissions.git

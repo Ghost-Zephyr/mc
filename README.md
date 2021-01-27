@@ -1,7 +1,13 @@
 # Minecraft server plugins
+Made by the glorious me!
+
+This repo is a collection of all the open source Minecraft server plugins I've made.
 
 ### cESS (CustomEssentials)
 Found in cess submodule.
+
+### noPermissions
+Found in noperms submodule.
 
 ### EnderItems
 Found in eitems submodule.
