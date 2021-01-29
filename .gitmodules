@@ -1,9 +1,9 @@
 [submodule "ebow"]
 	path = ebow
-	url = https://github.com/Ghost-Zephyr/enderbow
+	url = git@github.com:/Ghost-Zephyr/EnderBow.git
 [submodule "eitems"]
 	path = eitems
-	url = https://github.com/Ghost-Zephyr/enderitems
+	url = git@github.com:/Ghost-Zephyr/EnderItems.git
 [submodule "cess"]
 	path = cess
 	url = git@github.com:Ghost-Zephyr/CustomEssentials.git
