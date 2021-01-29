@@ -4,14 +4,6 @@
 add gods
 add groups
 
-
-# cEssentials
-
-Fix for <player> left the game and wisper formatting!
-
-
-# mmoCraft
-
 # magika
 crafted enchantment books
 
@@ -25,6 +17,8 @@ Ender Fighting Bow
 
 # cEssentials
 
+Fix for <player> left the game formatting!
+
 PlayerCommandPreprocessEvent
 ^^ useful for disabling commands?
 useful for /mute? minecraft.command.me
@@ -32,6 +26,8 @@ useful for /mute? minecraft.command.me
 - commands
 /mute &
 /cess muteall
+
+# mmoCraft
 
 ## BUGS!!1!
 - noPerms /help and /? not getting sent in PlayerCommandSendEvent beafore reload.
