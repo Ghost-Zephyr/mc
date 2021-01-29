@@ -1,0 +1,37 @@
+
+# noPermissions
+
+add gods
+add groups
+
+
+# cEssentials
+
+Fix for <player> left the game and wisper formatting!
+
+
+# mmoCraft
+
+# magika
+crafted enchantment books
+
+# enderItems
+Use lore for checking ender items
+more items
+
+- item upgrades
+Ender Fighting Bow
+
+
+# cEssentials
+
+PlayerCommandPreprocessEvent
+^^ useful for disabling commands?
+useful for /mute? minecraft.command.me
+
+- commands
+/mute &
+/cess muteall
+
+## BUGS!!1!
+- noPerms /help and /? not getting sent in PlayerCommandSendEvent beafore reload.
