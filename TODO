@@ -1,13 +1,19 @@
 
 # noPermissions
 
+find and give everyone permissions for /paper:mspt and /tps
+
 add gods
 add groups
+
+mods: bukkit.broadcast.admin
 
 # magika
 crafted enchantment books
 
 # enderItems
+Merge this with magika
+
 Use lore for checking ender items
 more items
 
