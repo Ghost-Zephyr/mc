@@ -5,7 +5,7 @@ wd=`pwd`
 cd $1
 
 mvn package
-cp target/"$1"-*.*.?.jar ../serv/plugins
+cp target/*-shaded.jar ../serv/plugins
 
 cd $wd
 
