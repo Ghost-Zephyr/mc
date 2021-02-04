@@ -1,0 +1,51 @@
+server_connect_timeout: 5000
+listeners:
+- query_port: 25565
+  motd: '&5Waterfall testing server'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  forced_hosts: []
+  ping_passthrough: false
+  priorities:
+  - testing
+  bind_local_address: true
+  host: 0.0.0.0:25565
+  max_players: 69
+  tab_size: 60
+  force_default_server: false
+remote_ping_cache: -1
+network_compression_threshold: 256
+permissions:
+  default:
+  - bungeecord.command.list
+  mod:
+  - bungeecord.command.server
+  - bungeecord.command.find
+  admin:
+  - bungeecord.command.send
+  god:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+log_pings: true
+connection_throttle_limit: 3
+prevent_proxy_connections: false
+timeout: 30000
+player_limit: 69
+ip_forward: true
+groups: {}
+remote_ping_timeout: 5000
+connection_throttle: 4000
+log_commands: false
+stats: b613ac7b-50a7-4e56-b2e2-b0e8ac324ef4
+online_mode: true
+forge_support: true
+disabled_commands: []
+inject_commands: true
+servers:
+  testing:
+    motd: 'Testing server for testing plugins!'
+    address: testing:25565
+    restricted: false

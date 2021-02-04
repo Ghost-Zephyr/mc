@@ -1,11 +1,15 @@
 serv/version_history.json
 serv/usercache.json
+serv/papermc-*.jar
 serv/eula.txt
 serv/plugins/
 serv/cache
 serv/worl*
 serv/worl
 serv/logs
+waterfall/plugins/*
+waterfall/modules/*
+waterfall/logs/*
 */target/
 .vscode/
 */.*

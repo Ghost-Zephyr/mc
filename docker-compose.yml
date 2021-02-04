@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  proxy:
+    build: waterfall
+    ports:
+    - 25565:25565
+    volumes:
+    - ./waterfall:/var/opt/waterfall
+  testing:
+    image: phyremaster/papermc:latest
+#    environment:
+#    - EULA=true
+    volumes:
+    - ./serv:/papermc

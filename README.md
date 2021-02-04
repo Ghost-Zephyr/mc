@@ -1,7 +1,11 @@
-# Minecraft server plugins
+# Minecraft server plugins (and more!)
 Made by the glorious me!
 
 This repo is a collection of all the open source Minecraft server plugins I've made.
+
+I've added docker and waterfall for super advanced server setups and BungeeCord/Waterfall plugin development.
+
+I will be running this very same software stack of Waterfall - PaperMC - Docker on my actual server too. Both for added scurity and all the Docker goodness.
 
 ### cESS (CustomEssentials)
 Found in cess submodule.

@@ -15,7 +15,7 @@ config-version: 20
 settings:
   use-alternative-luck-formula: false
   load-permissions-yml-before-plugins: true
-  bungee-online-mode: true
+  bungee-online-mode: false
   console-has-all-permissions: false
   region-file-cache-size: 256
   incoming-packet-spam-threshold: 300
@@ -78,6 +78,7 @@ timings:
   server-name: Unknown Server
 world-settings:
   default:
+    update-pathfinding-on-block-update: true
     disable-teleportation-suffocation-check: false
     baby-zombie-movement-modifier: 0.5
     fixed-chunk-inhabited-time: -1

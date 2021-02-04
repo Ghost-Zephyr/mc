@@ -24,7 +24,7 @@ advancements:
   - minecraft:story/disabled
 settings:
   log-villager-deaths: true
-  bungeecord: false
+  bungeecord: true
   sample-count: 12
   player-shuffle: 0
   user-cache-size: 1000
