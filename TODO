@@ -31,7 +31,8 @@ useful for /mute? minecraft.command.me
 
 - commands
 /mute &
-/cess muteall
+/muteall
+/ignore & /ignorelist?
 
 # mmoCraft
 
