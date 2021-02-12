@@ -2,13 +2,21 @@ version: '3.3'
 services:
   proxy:
     build: waterfall
+    image: waterfall
     ports:
     - 25565:25565
     volumes:
-    - ./waterfall:/var/opt/waterfall
+    - ./waterfall:/waterfall
+  minebot:
+    build: minebot
+    image: minebot
+    volumes:
+    - ./minebot:/opt
   testing:
     image: phyremaster/papermc:latest
-#    environment:
-#    - EULA=true
     volumes:
-    - ./serv:/papermc
+    - ./serv/testing:/papermc
+#  lobby:
+#    image: phyremaster/papermc:latest
+#    volumes:
+#    - ./serv/lobby:/papermc

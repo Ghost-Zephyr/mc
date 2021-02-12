@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dev.bitsnthings.mc</groupId>
+  <artifactId>river</artifactId>
+  <name>RiverPlugin</name>
+  <version>1.0.0</version>
+  <properties>
+    <main.class>dev.bitsnthings.mc.river.RiverPlugin</main.class>
+    <waterfall.version>1.16-R0.4-SNAPSHOT</waterfall.version>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <repositories>
+    <repository>
+      <id>papermc</id>
+      <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+    <repository>
+      <id>bungeecord-repo</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+  </repositories>
+  <!--
+      Configure what other libraries or plugins are we going to use in this plugin.
+  -->
+    <dependencies>
+      <dependency>
+          <groupId>io.github.waterfallmc</groupId>
+          <artifactId>waterfall-api</artifactId>
+          <version>${waterfall.version}</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.md-5</groupId>
+        <artifactId>bungeecord-api</artifactId>
+        <version>1.16-R0.4-SNAPSHOT</version>
+        <type>javadoc</type>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  <!--
+      Configure what happens when we are building this project.
+  -->
+  <build>
+      <!--
+          When we are building your plugins, what plugins should we use during this process?
+
+          The plugins here extend the functionality of Maven, just like your plugin enhances Minecraft
+          These are not Minecraft plugins, but only Maven plugins!
+      -->
+      <plugins>
+        <!--
+            The first and the most essential plugin is the compiler, that translates your
+            human readable code into bytecode.
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <!--
+              You want to check and update the latest version periodically from
+              https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin
+          -->
+          <version>3.8.1</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+          </configuration>
+        </plugin>
+        <!--
+            The second plugin is the shade plugin, packaging every library with
+            the "compile" scope (see dependencies)
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <!--
+              You want to check and update the latest version periodically from
+              https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin
+          -->
+          <version>3.2.1</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>shade</goal>
+              </goals>
+              <configuration>
+                <createDependencyReducedPom>false</createDependencyReducedPom>
+                <finalName>shaded-${project.name}-${project.version}</finalName>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+      <!--
+          During the build, we are going to scan all files in src/main/resources
+          folder such as plugin.yml and your settings files and replace all variables
+          such as ${main.class} with their proper values.
+
+          You can use native variables such as ${project.X} or the ones you defined above
+          in the properties section.
+      -->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>*</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+</project>

@@ -7,6 +7,9 @@ I've added docker and waterfall for super advanced server setups and BungeeCord/
 
 I will be running this very same software stack of Waterfall - PaperMC - Docker on my actual server too. Both for added scurity and all the Docker goodness.
 
+### river
+The advanced shit for custom Waterfall stuff.
+
 ### cESS (CustomEssentials)
 Found in cess submodule.
 

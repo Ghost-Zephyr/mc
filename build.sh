@@ -10,8 +10,8 @@ until [ "$sel" = "0" ]; do
   echo -n "  Enter selection: "
   read sel
   case $sel in
-    1 ) path="../serv/plugins" ; break ;;
-    2 ) path="../waterfall/plugins" ; break ;;
+    1 ) break ;;
+    2 ) break ;;
     0 ) exit ;;
     * ) echo "Invalid input!" ;;
   esac
@@ -20,10 +20,15 @@ wd=`pwd`
 cd $1
 mvn package
 if [ "$?" != "0" ]; then
-  echo "Build failed!\nExiting."
+  echo "Build failed!"
+	echo "Exiting."
   exit 1
 fi
-cp target/*-shaded.jar $path
+if [ "$sel" = "2" ]; then
+	cp target/shaded-*.jar ../waterfall/plugins
+else
+	cp target/*-shaded.jar ../serv/testing/plugins
+fi
 
 cd $wd
 

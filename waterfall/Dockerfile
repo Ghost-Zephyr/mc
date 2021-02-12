@@ -24,12 +24,12 @@ RUN if test -z "${WATERFALL_VERSION}" || test "${WATERFALL_VERSION}" == "latest"
 
 FROM openjdk:${JAVA_VERSION}-jre
 RUN useradd --create-home --shell /bin/bash minecraft \
- && mkdir -p /opt/waterfall /var/opt/waterfall \
- && chown -R minecraft /var/opt/waterfall/
+ && mkdir -p /opt/waterfall /waterfall \
+ && chown -R minecraft /waterfall/
 COPY --from=waterfall /waterfall.jar /opt/waterfall/
 USER minecraft
-WORKDIR /var/opt/waterfall
-VOLUME /var/opt/waterfall
+WORKDIR /waterfall
+VOLUME /waterfall
 EXPOSE 25565
 ENV JAVA_MEM_START=256M \
     JAVA_MEM_MAX=1024M
